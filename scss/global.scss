@@ -1,78 +1,71 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
-
-
-.region-header-first {
-	background-color:yellow;
-	min-height:5px;
+//-------------------------------------header
+.zone-header {
+	background-color:#e5e5e5;
 }
-.region-header-second {
-	background-color:orange;
-	min-height:5px;
-}
+	.region-header-first {
+		background-color:yellow;
+	}
+	.region-header-second {
+		background-color:orange;
+	}
 
-.region-branding {
-	background-color:red;
+//-------------------------------------branding
+.zone-branding{
+	background-color:#e5e5e5;
 }
+	.region-branding {
+		background-color:red;
+	}
 
-.region-menu {
-	ul {
-		margin:0px;
-		padding:0px;
-		list-style:none;
-		li {
-			border-bottom:1px solid white;
-		}
-		a {
-			display:block;
-			padding:10px 10px 10px 30px;
-			color:black;
-			background-color:#ccc;
-			text-decoration:none;
-		}
-		a:hover {
-			background-color:green;
+//-------------------------------------menu
+.zone-menu {
+	background-color:#e5e5e5;
+}
+	.region-menu {
+		ul {
+			margin:0px;
+			padding:0px;
+			list-style:none;
+			li {
+				border-bottom:1px solid white;
+			}
+			a {
+				display:block;
+				padding:10px 10px 10px 30px;
+				color:black;
+				background-color:#ccc;
+				text-decoration:none;
+			}
+			a:hover {
+				background-color:green;
+			}
 		}
 	}
-}
 
-.region-content {
-	background-color:blue;
+//-------------------------------------content
+.zone-content {
+		background-color:#e5e5e5;
 }
-.region-sidebar-first {}
-.region-sidebar-second {
-	background-color:#e0e0e0;
-	min-height:250px;
-}
+	.region-content {
+		background-color:blue;
+	}
+	.region-sidebar-first {}
+	.region-sidebar-second {
+		background-color:red;
+		min-height:250px;
+	}
 
-.region-postscript {}
-
+//-------------------------------------postscript
 .zone-footer {
 	background-color:#e5e5e5;
-	margin-left:10px;   //fix for the footer's size not aligning with the rest of the body
-	margin-right:10px;   //fix for the footer's size not aligning with the rest of the body
 }
-.region-footer-first,
-.region-footer-second,
-.region-footer-third
-{
-	display:block;
-	min-width:100%;
-	text-align:center;
-}
-footer .region-footer-first {  //used only to override the l/r margin added by omega
-	margin-left:0;
-	margin-right:0;
-}
-footer .region-footer-first {
-	border-top:2px solid black;
-	margin-top:10px;
-	padding-top:10px;
-}
-.region-footer-second {
-
-}
-.region-footer-third {
-
-}
+	.region-footer-first {
+		margin-top:13px;  //align the logo with the footer text
+		background-color:yellow;
+	}
+	.region-footer-second {
+		background-color:green;
+	}
