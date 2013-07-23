@@ -64,16 +64,16 @@ css[global.css][options][weight] = 10
 
 libraries[nmu_js][name] = NMU JavaScripts
 libraries[nmu_js][description] = Global JavaScript library for NMU webpages.
-libraries[nmu_js][js][0][file] = script.js
+libraries[nmu_js][js][0][file] = ../../omega_nmu/js/script.js
 libraries[nmu_js][js][0][options][weight] = -10
 ;this should enable this library (but didn't in testing)
 settings[alpha_libraries][nmu_js] = 'nmu_js'
 
-libraries[nmu_responsive_js][name] = NMU Responsive JavaScripts
-libraries[nmu_responsive_js][description] = Responsive JavaScript library for NMU webpages.
-libraries[nmu_responsive_js][js][0][file] = responsive.js
-libraries[nmu_responsive_js][js][0][options][weight] = -10
-settings[alpha_libraries][nmu_responsive_js] = 'nmu_responsive_js'
+libraries[nmu_responsive_nl_js][name] = NMU Responsive JavaScripts
+libraries[nmu_responsive_nl_js][description] = Responsive JavaScript library for NMU-newsletter webpages.
+libraries[nmu_responsive_nl_js][js][0][file] = responsive-nl.js
+libraries[nmu_responsive_nl_js][js][0][options][weight] = -10
+settings[alpha_libraries][nmu_responsive_nl_js] = 'nmu_responsive_nl_js'
 
 
 
