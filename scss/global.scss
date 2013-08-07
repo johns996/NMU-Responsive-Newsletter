@@ -49,25 +49,30 @@ body, span, p, ul, li, table, div {
 
 	}
 	.campus-top-nav {
-		background-color:white;
 		float:right;
 		margin:0px;
-		width:380px;
+		width:180px;
 		min-height:210px;
 		opacity:0.8;
-		padding-top:20px;
+		padding-top:10px;
 		padding-bottom:20px;
 		text-align:right;
 	}
 	ul.campus-top-nav {
 		list-style-type:none;
-		padding-left:1px;
+		margin-right:-10px;
+		li:first-child {
+			border-top:1px solid white;
+		}
+		li {
+			border-bottom:1px solid white;
+			border-left:1px solid white;
+		}
 		li a {
 			display:block;
 			background-color:#ccc;
-			margin-bottom:1px;
-			padding-top:15px;
-			padding-bottom:15px;
+			padding-top:12px;
+			padding-bottom:12px;
 			padding-left:5px;
 			padding-right:5px;
 			text-decoration:none;
