@@ -48,36 +48,33 @@ body, span, p, ul, li, table, div {
 	.region-header-second {
 
 	}
+
 	.campus-top-nav {
-		background-color:white;
-		float:right;
-		margin:0px;
-		width:380px;
-		min-height:210px;
 		opacity:0.8;
-		padding-top:20px;
-		padding-bottom:20px;
-		text-align:right;
 	}
 	ul.campus-top-nav {
-		list-style-type:none;
-		padding-left:1px;
-		li a {
-			display:block;
-			background-color:#ccc;
-			margin-bottom:1px;
-			padding-top:15px;
-			padding-bottom:15px;
-			padding-left:5px;
-			padding-right:5px;
+		margin:0px -11px 0px 0px;  //keep at -11px to hide the right border on the last item
+		padding:0px;
+		float:right;
+		li {
+			@include inline-block;
+			margin-top:20px;
+		}
+		a {
+			margin-left:-5px;  //having a 5px margin effectively hides the duplicate border on the inner items
+			height:50px;
+			border-right:solid 1px #ccc;
+			border-left:solid 1px #ccc;
+			border-bottom:solid 1px #ccc;
+			background-color:white;
+			padding:20px;
 			text-decoration:none;
 		}
-		li a:hover {
-			background-color:#e5e5e5;
-			text-decoration:underline;
+		a:hover {
+			background-color:#ccc;
+			//text-decoration:underline;
 		}
 	}
-
 
 //-------------------------------------branding
 .zone-branding{
