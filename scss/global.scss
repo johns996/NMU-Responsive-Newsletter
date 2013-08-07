@@ -1,16 +1,83 @@
-/* This file will hold styles for the mobile version of your website (mobile first). */
-/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+// This file will hold styles for the mobile version of your website (mobile first).
+// This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+@import "../../omega_nmu/scss/base";
+@import "compass/css3/opacity";
+
+//keep these imports at the top so they can be overwritten as needed by global styles
+//both of these files were tweaked to use the modernizr .fontface .no-fontface classes
+//add font awesome icons to be used on the site (3.0.2)
+@import '../../omega_nmu/scss/font-awesome/font-awesome';
+//add bootstrap icons 2.3.1 as a fallback to browsers without @font-face support
+@import '../../omega_nmu/scss/bootstrap-icons';
+
+//add bootstrap buttons 2.3.1
+//these three styles were downloaded with default settings from twitter bootstrap's site http://twitter.github.com/bootstrap/customize.html
+//they were downloaded as single files in order to toggle them on off for testing purposes
+@import '../../omega_nmu/scss/bootstrap-buttons';
+
+//import module CSS
+//module styles are included at the top because they are generally more specific than the global styles and will take precedence due to that specificity
+@import '../../omega_nmu/scss/modules/drupal-user';
+
+html {
+	font-size: 62.5%; //get rem's down to a easily understandable size (14px == 1.4 rem)
+	//rem's used in this SCSS will always reference the size of the html font, ie. root em's (rems)
+}
+
+body {
+	background-color:$base-color;  //030
+}
+
+body, span, p, ul, li, table, div {
+	font-family:$base-font-family;
+	font-size: 14px !important;
+	font-size: 1.4rem !important;
+}
 
 //-------------------------------------header
 .zone-header {
-	background-color:#e5e5e5;
+	background-color:white;
+	min-height:250px;
+	border:1px solid #ccc;
+	border-bottom:5px solid $contrast-color;
 }
 	.region-header-first {
-		background-color:yellow;
+
 	}
 	.region-header-second {
-		background-color:orange;
+
 	}
+	.campus-top-nav {
+		background-color:white;
+		float:right;
+		margin:0px;
+		width:380px;
+		min-height:210px;
+		opacity:0.8;
+		padding-top:20px;
+		padding-bottom:20px;
+		text-align:right;
+	}
+	ul.campus-top-nav {
+		list-style-type:none;
+		padding-left:1px;
+		li a {
+			display:block;
+			background-color:#ccc;
+			margin-bottom:1px;
+			padding-top:15px;
+			padding-bottom:15px;
+			padding-left:5px;
+			padding-right:5px;
+			text-decoration:none;
+		}
+		li a:hover {
+			background-color:#e5e5e5;
+			text-decoration:underline;
+		}
+	}
+
 
 //-------------------------------------branding
 .zone-branding{
@@ -47,25 +114,46 @@
 
 //-------------------------------------content
 .zone-content {
-		background-color:#e5e5e5;
+	background-color:white;
+	border:1px solid #ccc;
 }
 	.region-content {
-		background-color:blue;
+		background-color:white;
+		padding-bottom:20px;
+		padding-top:10px;
+
+		img[align="left"],
+		img[style*="float: left"],
+		img[style*="float:left"]{ //more about attribute selectors: http://css-tricks.com/attribute-selectors/ -and- http://quirksmode.org/css/selectors/selector_attribute.html
+			padding-right:5px;
+		}
+		img[align="right"],
+		img[style*="float: right"],
+		img[style*="float:right"]{
+			padding-left:5px;
+		}
 	}
 	.region-sidebar-first {}
 	.region-sidebar-second {
-		background-color:red;
+		background-color:#e5e5e5;
 		min-height:250px;
+		margin-left:5px;
+		padding-top:10px;
+		padding-bottom:20px;  //must have same padding as region-content for equal-height js to work properly
 	}
 
 //-------------------------------------postscript
 .zone-footer {
-	background-color:#e5e5e5;
+	background-color:#030;
+	border:1px solid #ccc;
+	border-top:5px solid #fc3;
 }
 	.region-footer-first {
 		margin-top:13px;  //align the logo with the footer text
-		background-color:pink;
 	}
 	.region-footer-second {
-		background-color:green;
+		color:white;
+		a {
+			color:#ccc;
+		}
 	}
