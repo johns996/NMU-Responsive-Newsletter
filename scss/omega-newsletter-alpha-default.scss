@@ -1,7 +1,77 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 
+@import "../../omega_nmu/scss/base";
+@import "compass/css3/opacity";
+@import "compass/css3/text-shadow";
 
 .zone-header {
 	background-image:url('../images/campus_banner2.jpg');
 	background-repeat:no-repeat;
+	background-color:$base-color-dark;
+}
+
+	.campus-slogan {
+		float:right;
+		clear:none;
+		h2 {
+			@include rem-font-size(30, '');
+			@include rem-line-height(30);
+			margin:10px;
+			font-weight:600;
+			font-family:$callout-font-family;
+			color:white;
+			text-align:right;
+			@include text-shadow(1px 1px 2px black);
+		}
+	}
+
+	.region-header-second {
+		position: absolute !important;  //important needed to override the omega positioning
+		bottom: 0;
+		left: 0;
+	}
+
+		ul.campus-top-nav {
+			margin: 0 0 0 -10px;
+			padding: 0px;
+			padding-right: 20px;
+			width:100%;
+			background-color:$base-color-dark;
+			text-align:center;
+			@include opacity(0.8);
+			li:first-child {
+				border-left:solid 1px  #ccc;
+				margin-left:0px;
+			}
+			li {
+				@include inline-block;
+				padding:20px 0;
+				border-top:none; //cancel out mobile border
+				border-right:solid 1px #ccc;
+				margin-left:-4px;  //leave one pixel for the border
+			}
+			a {
+				color:#ccc;
+				text-decoration:none;
+				padding:20px;
+				display:inline;  //cancel out mobile display
+			}
+			a:hover {
+				background-color:$base-color;
+				color:white;
+				//@include border-radius(15px); //turn this on and take out the borders for pill-like navigation
+			}
+		}
+
+.mobile_hide,
+.mobile_break{
+	display:inline;
+}
+.mobile_only {
+	display:none;
+}
+
+.desktop-break {  //used to emulate a br on desktop
+	display:block;
+	height:0px;
 }
