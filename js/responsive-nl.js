@@ -43,6 +43,15 @@ function responsive_tweaks(theMethod){
 		{
 			jQuery('.jquery_mobile').remove(); //make sure added items only appear once (keep this as the first item)
 
+			//create the mobile navigation button
+			jQuery('#nl-top-nav').before('<div class="jquery_mobile mobile-nav-div" id="mobile-nav-block">CAMPUS<a class="btn btn-small jquery_mobile" id="branding_nav_icon"><i class="icon-reorder"></i></a></div>');
+			jQuery('#nl-top-nav').hide();
+			jQuery('#mobile-nav-block').click(function(){
+				jQuery('#nl-top-nav').slideToggle();
+				jQuery('#branding_nav_icon').toggleClass('btn-success');
+			});
+
+
 			//pull out the image height from all images in the content zone in mobile view
 			//this allows an image to scale on small screens
 			jQuery('#zone-content img').each(function(){
@@ -66,17 +75,20 @@ function responsive_tweaks(theMethod){
 		else
 		{
 			jQuery('.jquery_mobile').remove(); //make sure items added at this size are removed
+			jQuery('#nl-top-nav').show();
 			jQuery('#zone-content iframe').each(function(){  //remove the iframe class added for mobile view
 				jQuery(this).removeClass('jquery_iframe');
 			});
 		}
 
-		/* no tweaks are needed at these sizes
+
 
 		//----------------------------------------------narrow view
 		if(windowWidth>740-scrollBarWidth && windowWidth<980-scrollBarWidth)
 		{
 			jQuery('.jquery_740').remove();
+			jQuery('.campus-closeup').removeAttr('width');
+			jQuery('.campus-closeup').css('width', '');
 		}
 		else
 		{
@@ -87,12 +99,15 @@ function responsive_tweaks(theMethod){
 		if(windowWidth>960-scrollBarWidth && windowWidth<1220-scrollBarWidth)
 		{
 			jQuery('.jquery_960').remove();
+			jQuery('.campus-closeup').removeAttr('width');
+			jQuery('.campus-closeup').css('width', '');
 		}
 		else
 		{
 			jQuery('.jquery_960').remove();
 		}
 
+		/* no tweaks are needed at this size
 		//----------------------------------------------wide view
 		if(windowWidth>1220-scrollBarWidth)
 		{
