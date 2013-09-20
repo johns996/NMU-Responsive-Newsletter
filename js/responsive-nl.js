@@ -71,16 +71,22 @@ function responsive_tweaks(theMethod){
 				jQuery(this).addClass('jquery_iframe');
 			});
 
-			jQuery('#zone-content table').wrap('<div class="overflow-table jquery_mobile"></div>');
-
+			if (!jQuery('#zone-content table').parent().is(".overflow-table")){
+				jQuery('#zone-content table').wrap('<div class="overflow-table"></div>');
+			}
 		}
 		else
 		{
 			jQuery('.jquery_mobile').remove(); //make sure items added at this size are removed
 			jQuery('#nl-top-nav').show();
+
 			jQuery('#zone-content iframe').each(function(){  //remove the iframe class added for mobile view
 				jQuery(this).removeClass('jquery_iframe');
 			});
+
+			if (jQuery('#zone-content table').parent().is(".overflow-table")){
+				jQuery('#zone-content table').unwrap();  //pull off the overflow table div
+			}
 		}
 
 
