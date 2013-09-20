@@ -71,6 +71,8 @@ function responsive_tweaks(theMethod){
 				jQuery(this).addClass('jquery_iframe');
 			});
 
+			jQuery('#zone-content table').wrap('<div class="overflow-table"></div>');
+
 		}
 		else
 		{
