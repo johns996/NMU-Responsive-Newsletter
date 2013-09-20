@@ -49,7 +49,7 @@ function responsive_tweaks(theMethod){
 
 			//create the mobile navigation bar and button
 			jQuery('#nl-top-nav').before('<div class="jquery_mobile mobile-nav-div" id="mobile-nav-block">CAMPUS<a class="btn btn-small jquery_mobile" id="branding_nav_icon"><i class="icon-reorder"></i></a></div>');
-			jQuery('#nl-top-nav').prepend('<li><a href="#IssueNav">'+$issueNavText+'</a></li>');
+			jQuery('#nl-top-nav').prepend('<li class="jquery_mobile"><a href="#IssueNav">'+$issueNavText+'</a></li>');
 			jQuery('#nl-top-nav').hide();
 			jQuery('#mobile-nav-block').click(function(){
 				jQuery('#nl-top-nav').slideToggle();
