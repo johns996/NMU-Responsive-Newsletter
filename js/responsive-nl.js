@@ -43,8 +43,13 @@ function responsive_tweaks(theMethod){
 		{
 			jQuery('.jquery_mobile').remove(); //make sure added items only appear once (keep this as the first item)
 
-			//create the mobile navigation button
+
+			//get the h2 text from the issue box to use in the mobile navigation
+			$issueNavText = jQuery('#nl-issue-nav h2').html();
+
+			//create the mobile navigation bar and button
 			jQuery('#nl-top-nav').before('<div class="jquery_mobile mobile-nav-div" id="mobile-nav-block">CAMPUS<a class="btn btn-small jquery_mobile" id="branding_nav_icon"><i class="icon-reorder"></i></a></div>');
+			jQuery('#nl-top-nav').prepend('<li><a href="#IssueNav">'+$issueNavText+'</a></li>');
 			jQuery('#nl-top-nav').hide();
 			jQuery('#mobile-nav-block').click(function(){
 				jQuery('#nl-top-nav').slideToggle();
@@ -78,7 +83,7 @@ function responsive_tweaks(theMethod){
 		else
 		{
 			jQuery('.jquery_mobile').remove(); //make sure items added at this size are removed
-			jQuery('#nl-top-nav').show();
+			jQuery('#nl-top-nav').show();  //ensure that when sizing up from mobile view the nav is shown
 
 			jQuery('#zone-content iframe').each(function(){  //remove the iframe class added for mobile view
 				jQuery(this).removeClass('jquery_iframe');
