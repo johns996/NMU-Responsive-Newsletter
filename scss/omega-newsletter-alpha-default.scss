@@ -5,11 +5,14 @@
 @import "compass/css3/text-shadow";
 
 .zone-header {
-	background-image:url('../images/campus_banner2.jpg');
-	background-repeat:no-repeat;
 	background-color:$base-color-dark;
 	min-height:200px;
 }
+.zone-header-campus {  //this class is set in the omega GUI under zone config
+	background-image:url('../images/campus_banner2.jpg');
+	background-repeat:no-repeat;
+}
+
 
 	.campus-slogan {
 		float:right;
