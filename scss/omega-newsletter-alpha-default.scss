@@ -4,11 +4,9 @@
 @import "compass/css3/opacity";
 @import "compass/css3/text-shadow";
 
-.zone-header {
+.zone-header-campus {  //this class is set in the omega GUI under zone config
 	background-color:$base-color-dark;
 	min-height:200px;
-}
-.zone-header-campus {  //this class is set in the omega GUI under zone config
 	background-image:url('../images/campus_banner2.jpg');
 	background-repeat:no-repeat;
 }
