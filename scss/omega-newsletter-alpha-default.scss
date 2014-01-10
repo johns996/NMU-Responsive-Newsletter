@@ -4,6 +4,28 @@
 @import "compass/css3/opacity";
 @import "compass/css3/text-shadow";
 
+
+
+/********** Drew's Crap **********/
+.zone-content-northern-news {
+	.northern-news-content-submit-botton:hover {
+		background-color:$contrast-color;
+	}
+
+	.northern-news-content-submit-botton {
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+		background-color:$contrast-color-dark;
+		text-align:center;
+		color:black;
+		width:160px;
+		padding:3px;
+		border-top:50px;
+	}
+}
+
+
+
 .zone-header-campus {  //this class is set in the omega GUI under zone config
 	background-color:$base-color-dark;
 	min-height:200px;

@@ -3,8 +3,97 @@
  *  apply to the normal and widescreen layouts. You may override these styles in the normal
  *  and widescreen CSS files as appropriate. */
 
+@import "../../omega_nmu/scss/base";
+
+/***** Northern Notes *****/
+.zone-header-northern-news {
+	.header-first-northern-news {
+	}
+
+	.header-second-northern-news {
+		h1 {
+			@include rem-font-size(70, '');
+			@include rem-line-height(70);
+		}
+
+		padding-top:15px;
+	}
+
+	height:100px;
+}
+
+
+.zone-menu-northern-news {
+	.menu-first-northern-news {
+		h3 {
+			@include rem-font-size(16, '');
+		}
+
+		max-width:200px;
+		height:30px\9;
+	}
+
+	.menu-second-northern-news {
+		h4 {
+			@include rem-font-size(12, '');
+			@include rem-line-height(20);
+			padding-top:8px;
+		}
+
+		text-align:right;
+		float:right;
+		min-width:430px;
+		display:block;
+
+		margin-top:-20px\9;
+	}
+}
+
+
+.zone-content-wrapper-northern-news {
+	@include rem-line-height(20);
+	padding-top:20px;
+}
+
+
+.zone-content-northern-news {
+	.content-first-northern-news {
+		.northern-news-content-submit-announcments {
+		}
+
+		.northern-news-content-divs {
+			padding-left:10px;
+			padding-right:15px;
+		}
+
+		width:450px !important;
+	}
+
+	.content-second-northern-news {
+		width:218px !important;
+		margin-top:-7px !important;
+	}
+}
+
+
+.zone-footer-northern-news {
+	width:620px;
+	max-width:620px;
+}
+
+
 .zone-header-campus {
 	background-size:720px auto;
 	background-position:0px -30px;
 }
+
+
+
+
+
+
+
+
+
+
 

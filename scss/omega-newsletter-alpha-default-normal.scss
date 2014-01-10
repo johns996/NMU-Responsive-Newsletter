@@ -2,8 +2,114 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
 
+@import "../../omega_nmu/scss/base";
+
 .zone-header-campus {
 	background-size:960px auto;
 	background-position:0px -80px;
+}
+
+
+/***** Northern Notes *****/
+.zone-header-northern-news {
+	.header-second-northern-news {
+		h1 {
+			@include rem-font-size(90, '');
+			@include rem-line-height(65);
+
+			margin:0;
+			text-align:right;
+		}
+
+		width:600px;
+		padding-right:50px;
+		float:right;
+	}
+}
+
+
+.zone-menu-wrapper-northern-news {
+	height:40px;
+}
+
+.zone-menu-northern-news {
+	.menu-first-northern-news {
+		h3 {
+			@include rem-font-size(20, '');
+		}
+
+		max-width:250px;
+	}
+
+	.menu-second-northern-news {
+		h4 {
+			@include rem-font-size(16, '');
+			@include rem-line-height(30);
+			padding-top:8px;
+			text-align:right;
+		}
+
+		margin-right:0px !important;
+		float:right;
+		max-width:550px;
+		min-width:550px;
+		padding-top:5px\9;
+	}
+}
+
+
+.zone-content-northern-news {
+	.content-first-northern-news {
+		.northern-news-content-divs {
+			clear:both;
+		}
+
+		.northern-news-content-submit-announcments {
+			width:calc(100% - 190px);
+			float:left;
+		}
+
+		.northern-news-content-submit-botton {
+			margin-top:25px;
+			width:140px;
+			float:right;
+			font-size:18px !important;
+			border:1px solid green;
+		}
+
+		padding-right:0px;
+		width:600px !important;
+	}
+
+	.content-second-northern-news {
+		width:300px !important;
+	}
+}
+
+
+.zone-footer-northern-news {
+	.footer-first-northern-news {
+		max-width:280px;
+		min-width:280px;
+	}
+
+	.footer-second-northern-news {
+		max-width:280px;
+		min-width:280px;
+	}
+
+	.footer-third-northern-news {
+		max-width:280px;
+		min-width:280px;
+	}
+
+	width:860px;
+	max-width:860px;
+
+	@include rem-line-height(19);
+	a:link 		{ font-size:14px; color:white; text-decoration: none; }
+	a:visited 	{ font-size:14px; color:white; text-decoration: none; }
+	a:hover 	{ font-size:14px; color:white; text-decoration: underline;}
+	a:active 	{ font-size:14px; color:white; text-decoration: none; }
 }
 

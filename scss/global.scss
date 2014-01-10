@@ -41,6 +41,334 @@ body, span, p, ul, li, table, div {
 	font-size: 1.4rem !important;
 }
 
+
+/****** Northern Notes ******/
+.zone-header-wrapper-northern-news {
+	background-color:$base-color-dark;
+	margin-right:-8px;
+	margin-left:-8px;
+	margin-top:-8px;
+	border-bottom:2px solid white;
+	outline: 10px solid $base-color;
+	margin-bottom:10px;
+}
+
+.zone-header-northern-news {
+	.header-first-northern-news {
+		padding-top:15px;
+		max-width:200px;
+		min-width:200px;
+	}
+
+	.header-second-northern-news {
+		h1 {
+			margin:0;
+			font-weight:400;
+			font-family:$callout-font-family;
+			text-align:left;
+			padding-top:5px;
+		}
+
+		color:$contrast-color;
+		max-width:700px;
+		float:left;
+	}
+
+	background-color:$base-color-dark;
+	border:0px solid $background-color-sub;
+	min-height:60px;
+	max-width:970px;
+}
+
+
+.zone-menu-wrapper-northern-news {
+	background-color:$base-color-dark;
+	border-top:2px solid white;
+	margin-right:-8px;
+	margin-left:-8px;
+	height:30px;
+}
+
+.zone-menu-northern-news {
+	.menu-first-northern-news {
+		h3 {
+			padding-top:6px;
+			margin:0;
+			font-weight:400;
+			font-family:$verdana;
+		}
+
+		max-width:300px;
+	}
+
+	.menu-second-northern-news {
+		h4 {
+			padding-bottom:5px;
+			margin:0;
+			font-weight:400;
+		}
+		float:right;
+		max-width:500px;
+		display:none;
+	}
+
+	height:30px;
+	color:#fff;
+	background-color:$base-color-dark !important;
+	max-width:970px;
+}
+
+
+.zone-content-wrapper-northern-news {
+	background:$base-color;
+	padding:0px;
+	margin-bottom:-1px;
+	margin-right:-8px;
+	margin-left:-8px;
+
+	h2 {
+		padding-top:15px;
+		padding-bottom:10px;
+		margin:0px;
+	}
+
+	a:link 		{ color:black; text-decoration: none; }
+	a:visited 	{ color:black; text-decoration: none; }
+	a:hover 	{ color:grey; text-decoration: none; }
+	a:active 	{ color:black; text-decoration: none; }
+	@include rem-line-height(18);
+
+	ul {
+		li {
+			list-style-type: none;
+			padding-bottom:4px;
+		}
+
+		margin:0px;
+		padding:0px;
+		padding-top:2px;
+		padding-left:15px;
+	}
+}
+
+.zone-content-northern-news {
+	.form_l_float {
+		float:left;
+	}
+
+	.northern-news-content-submit-botton:hover {
+		background-color:$contrast-color;
+	}
+
+	.northern-news-content-submit-botton {
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+		background-color:$contrast-color-dark;
+		text-align:center;
+		color:black;
+		width:160px;
+		padding:3px;
+	}
+
+	.content-first-northern-news {
+		h3 {
+			padding:0px;
+			margin:0px;
+			padding-top:5px;
+			padding-bottom:5px;
+		}
+
+		.northern-news-content-divs {
+			.northern-news-content-submit-announcments {
+				.HTML_AddCheck_Label {
+					white-space:normal !important;
+				}
+
+				.hasDatepicker {
+					width:70px;
+				}
+
+				padding-right:6px;
+				margin-bottom:10px;
+			}
+
+			.ResponsiveInput {
+				width:95%;
+				max-width:400px;
+
+				.form_l_float {
+					float:none;
+				}
+			}
+
+			.northern-news-content-cal {
+				.northern-news-content-cal-events {
+					float:left;
+					min-width:200px;
+					padding-bottom:10px;
+				}
+				.northern-news-content-cal-deadlines {
+					float:left;
+				}
+			}
+
+			padding-bottom:10px;
+		}
+
+		padding-left:10px;
+		max-width:640px;
+		background:white;
+	}
+
+	.content-second-northern-news {
+		.content-second-northern-news-header {
+			margin-top:8px;
+			background-color:$base-color-dark;
+			color:$contrast-color;
+			text-align:center;
+			@include rem-font-size(18, '!important');
+			border-top:2px solid white;
+			font-weight:bold;
+			padding-top:3px;
+			padding-bottom:3px;
+		}
+
+		.content-second-northern-news-note {
+			padding:10px;
+			background-color:white;
+		}
+
+		.content-second-northern-news-question {
+			.content-second-northern-news-question-submit {
+				padding-bottom:10px;
+			}
+
+			.content-second-northern-news-question-display {
+				margin-bottom:5px;
+			}
+
+			.content-second-northern-news-question-display-button {
+				width:calc(50% + 65px);
+				height:35px;
+			}
+			.northern-news-content-submit-botton {
+				margin-top:10px;
+				margin-bottom:10px;
+				width:130px;
+				float:right !important;
+			}
+
+			.ResponsiveInput {
+				width:100% !important;
+				max-width:400px;
+
+				.form_l_float {
+					float:none;
+				}
+			}
+
+			padding:10px;
+			background-color:white;
+		}
+
+		h3 {
+			padding:0px;
+			margin:0px;
+			padding-bottom:8px;
+			padding-top:2px;
+		}
+
+		p {
+			padding:0px;
+			margin:0px;
+			padding-bottom:8px;
+		}
+
+		width:calc(100% - 20px);
+	}
+
+	max-width:970px;
+	border-color:$base-color;
+	background-color:$base-color;
+	padding-bottom:0px;
+	margin-bottom:0px;
+}
+
+
+.zone-postscript-wrapper-northern-news {
+	border-right:0px;
+	border-left:0px;
+	border-top:2px solid white;
+	border-bottom:2px solid white;
+	background-color:$base-color-dark;
+	margin-right:-8px;
+	margin-left:-8px;
+}
+
+.zone-postscript-northern-news {
+	.postscript-northern-news {
+		p {
+			color:white;
+			@include rem-font-size(18, '!important');
+			margin:0px;
+			padding:0px;
+			padding-top:4px;
+		}
+
+		text-align:center;
+		vertical-align: center;
+		height:28px;
+	}
+}
+
+.zone-footer-wrapper-northern-news {
+	background:$base-color;
+	margin-right:-8px;
+	margin-left:-8px;
+}
+
+.zone-footer-northern-news {
+	.footer-first-northern-news {
+		max-width:200px;
+		min-width:200px;
+		padding:0px;
+		margin:0px;
+		padding-bottom:10px;
+		float:left;
+	}
+
+	.footer-second-northern-news {
+		max-width:200px;
+		min-width:200px;
+		padding:0px;
+		margin:0px;
+		padding-bottom:10px;
+		float:left;
+	}
+
+	.footer-third-northern-news {
+		max-width:200px;
+		min-width:200px;
+		padding:0px;
+		margin:0px;
+		padding-bottom:10px;
+		float:left;
+	}
+
+	@include rem-line-height(12);
+	a:link 		{ @include rem-font-size(10, ''); color:white; text-decoration: none; }
+	a:visited 	{ @include rem-font-size(10, ''); color:white; text-decoration: none; }
+	a:hover 	{ @include rem-font-size(10, ''); color:white; text-decoration: underline;}
+	a:active 	{ @include rem-font-size(10, ''); color:white; text-decoration: none; }
+	padding-left:20px;
+	padding-top:10px;
+	max-width:970px;
+	background-color:$base-color;
+}
+
+
+
+
 //-------------------------------------header
 .zone-header-campus {
 	min-width:320px;
