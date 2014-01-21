@@ -368,6 +368,7 @@ body, span, p, ul, li, table, div {
 
 
 
+/****** Campus ******/
 
 //-------------------------------------header
 .zone-header-campus {
@@ -422,8 +423,7 @@ body, span, p, ul, li, table, div {
 	.region-header-second-campus {
 		margin:0;
 		text-align:left;
-	}
-		.mobile-nav-div {
+		.mobile-nav-div {  //created dynamically by the responsive-nl.js
 			display:block;
 			margin: 0px;
 			padding:20px;
@@ -433,7 +433,7 @@ body, span, p, ul, li, table, div {
 			cursor:pointer;
 		}
 
-		#branding_nav_icon {
+		#branding_nav_icon {  //created dynamically by the responsive-nl.js
 			float:right;
 			margin-top:-5px;
 			margin-bottom:3px;
@@ -441,36 +441,36 @@ body, span, p, ul, li, table, div {
 			font-weight:300;
 			@include rem-font-size(16, '');
 		}
+	}
+	.campus-top-nav { }
 
-		.campus-top-nav { }
-
-			ul.campus-top-nav {
-				margin: 0px;
-				padding: 0px;
-				background-color:$base-color-dark;
-				li {
-					border-top:solid 1px #ccc;
-				}
-				a {
-					color:#ccc;
-					text-decoration:none;
-					padding:20px;
-					display:block;  //makes the link fill up the list item region instead of being a small square within it
-				}
-				a:hover {
-					background-color:$base-color;
-					color:white;
-					//@include border-radius(15px); //turn this on and take out the borders for pill-like navigation
-				}
+		ul.campus-top-nav {
+			margin: 0px;
+			padding: 0px;
+			background-color:$base-color-dark;
+			li {
+				border-top:solid 1px #ccc;
 			}
+			a {
+				color:#ccc;
+				text-decoration:none;
+				padding:20px;
+				display:block;  //makes the link fill up the list item region instead of being a small square within it
+			}
+			a:hover {
+				background-color:$base-color;
+				color:white;
+				//@include border-radius(15px); //turn this on and take out the borders for pill-like navigation
+			}
+		}
 
 //-------------------------------------branding
-.zone-branding{ }
-	.region-branding { }
+.zone-branding-campus{ }
+	.region-branding-campus { }
 
 //-------------------------------------menu
-.zone-menu { }
-	.region-menu { }
+.zone-menu-campus { }
+	.region-menu-campus { }
 
 //-------------------------------------content
 .zone-content-campus {
@@ -527,8 +527,8 @@ body, span, p, ul, li, table, div {
 	}
 
 //-------------------------------------postscript
-.zone-postscript { }
-	.region-postscript { }
+.zone-postscript-campus { }
+	.region-postscript-campus { }
 
 //-------------------------------------footer
 .zone-footer-campus {
@@ -550,6 +550,10 @@ body, span, p, ul, li, table, div {
 			color:#ccc;
 		}
 	}
+
+
+/****** FinAidToolbox ******/
+
 
 
 //--------------------------------------classes
