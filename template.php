@@ -34,6 +34,10 @@ function omega_newsletter_preprocess_user_login(&$variables) {
 
 function omega_newsletter_preprocess_html(&$vars)
 {
+	//add a site-specific class to the body tag
+	$siteID = str_replace('Drupal', '', $GLOBALS['conf']['syslog_identity']);
+	$vars['attributes_array']['class'][] = $siteID;
+
 	//add a conditional stylesheet for IE8 and under
 	drupal_add_css(path_to_theme() . '/css/ie-lt-9.css', array(
 		'group' => CSS_THEME,
