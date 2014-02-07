@@ -5,6 +5,8 @@
 @import "compass/css3/opacity";
 @import "compass/css3/text-shadow";
 @import "compass/css3/border-radius";
+//add transform for toolbox background rotation
+@import "compass/css3/transform";
 
 //keep these imports at the top so they can be overwritten as needed by global styles
 //both of these files were tweaked to use the modernizr .fontface .no-fontface classes
@@ -589,13 +591,15 @@ body.FinancialAidToolbox {
 		background-color:$base-color-light;
 		padding-left:10px;
 		height:70px;
+		position:relative; //used for the punched out corner
+		overflow:hidden;  //hide the punched out corner
 		div.finaidtoolbox-header-text {
-			@include rem-font-size(45, '!important');
-			@include rem-line-height(45);
+			@include rem-font-size(35, '!important');
+			@include rem-line-height(35);
 			font-weight:600;
 			color:white;
-			font-family: $callout-font-family;
-			padding:10px;
+			//font-family: $callout-font-family;
+			padding:15px 10px 10px;
 		}
 	}
 	//the div selector is needed to make sure the margin overrides the omega margin.
@@ -663,11 +667,39 @@ body.FinancialAidToolbox {
 		//padding-left:10px;
 	}
 	.region-sidebar-second-finaidtoolbox {
-		background-color:#e5e5e5;
 		min-height:250px;
 		padding-top:10px;
 		padding-bottom:52px;  //must have same padding as region-content for equal-height js to work properly
 	}
+
+	.sidebar-block-wrapper {}
+
+	.sidebar-block-header {
+		h1 {
+			margin:0;
+			@include rem-font-size(30, '!important');
+			@include rem-line-height(30);
+			font-weight:600;
+			color:white;
+			//font-family: $callout-font-family;
+			padding:10px;
+			text-align:center;
+		}
+		color:white;
+		padding:10px;
+		margin-bottom: -15px;
+		position:relative;  //used for the punched out corner
+		overflow:hidden;  //hide the punched out corner
+	}
+	.block-header-blue {background-color: #3333cc;}
+	.block-header-yellow {background-color: #ffcc33;}
+	.block-header-red {background-color: #993300;}
+	.sidebar-block-body {
+		padding:10px;
+		margin-bottom:20px;
+		background-color: #DDDEA5;
+	}
+
 
 .zone-footer-wrapper-finaidtoolbox {}
 .zone-footer-finaidtoolbox {
@@ -709,4 +741,14 @@ body.FinancialAidToolbox {
 }
 .desktop-break {
 	display:inline-block;
+}
+.punched-out-corner-brown {  //used on elements in the toolbox site to give the illusion of a punched out corner
+	position:absolute;
+	right:-17px;
+	top:-17px;
+	background-image:url('../images/brown_corner.png');
+	background-repeat:no-repeat;
+	@include rotate(45deg);
+	height:35px;
+	width:35px;
 }
