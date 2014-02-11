@@ -573,9 +573,6 @@ body.FinancialAidToolbox {
 .zone-content-wrapper-finaidtoolbox {}
 .zone-content-finaidtoolbox {  //the majority of the page is in the content zone for this site since we needed a full page length right bar
 	min-width:320px;
-	table {
-		border-collapse: inherit;
-	}
 }
 
 	//in order for the two header elements to look like one, some padding and margin tweaks are needed.  in most cases this one-ness is done with wrapper elements but because of the layout of this page with the spanning sidebar wrappers could not be used
@@ -610,25 +607,47 @@ body.FinancialAidToolbox {
 
 	.region-menu-finaidtoolbox {
 		background-color:#999966;
-		//border-top:1px dotted black;
-		//border-left:1px dotted black;
-		//border-right:1px dotted black;
-
 		//left/right padding has to be applied to this region within the blocks.  any l/r padding will break the layout of this element
 
-		.finaidtoolbox-menu {
+		.finaidtoolbox-pathfinder-menu {
 			margin:10px;
 			padding:10px;
 			background-color:#ffffcc;
-			h2{}
+			height:50px;  //this region must have a height or the floated progress elements will overlap the bottom border
+			h2{
+				@include rem-font-size(25, '!important');
+				@include rem-line-height(25);
+				margin:0px;
+				margin-bottom:8px;
+			}
 		}
 		.finaidtoolbox-progress-label {
 			float:left;
+			padding-right:10px;
+			font-weight:600;
+			@include rem-font-size(15, '!important');
 		}
 		.finaidtoolbox-progress-bar {
-			//float:left;
-			//background-color:green;
-			a{}
+			color:$contrast-color;
+			float:left;
+			background-color:$base-color-light;
+			padding:2px;
+			a,
+			a:visited{
+				text-decoration:none;
+				color:$contrast-color;
+				padding: 5px 20px;
+			}
+			a:first-child{
+				margin-left:5px;
+			}
+			a:last-child {
+				margin-right:5px;
+			}
+			a:hover{
+				background-color:$contrast-color;
+				color:$base-color-light;
+			}
 		}
 
 
@@ -637,18 +656,61 @@ body.FinancialAidToolbox {
 	//this margin was adjusted to accommodate the border applied in the region
 	div.region-menu-finaidtoolbox,
 	div.region-content-finaidtoolbox{
-		//margin-left:9px;
-		//margin-right:9px;
+
 	}
 
 	.region-content-finaidtoolbox {
-		background-color:#999966;
+		//background-color:#999966;
+		background-color:#ffffcc;
 		padding-bottom:20px;
 		padding-top:10px;
+		//padding:10px;
 
-		//border-left:1px dotted black;
-		//border-right:1px dotted black;
-		//border-bottom:1px dotted black;
+		.content {
+			padding: 0 5px;  //this is only set to 5 because there are two content divs wrapped around each other
+		}
+
+		.finaidtoolbox-pathfinder-wrapper {
+			background-color:#999966;
+			margin: -10px -10px -20px -10px;
+			padding-bottom: 20px;
+		}
+
+		.finaidtoolbox-pathfinder-number {
+			background-image:url('../images/number_circle.png');
+			background-repeat:no-repeat;
+			position:relative;
+			top:-10px;
+			left:-10px;
+			width:25px;
+			height:25px;
+			padding-left: 7px;
+			padding-top: 3px;
+			font-weight: 600;
+			margin-bottom: -10px;
+			color:$base-color-light;
+		}
+		.finaidtoolbox-pathfinder-content {
+			background-color:#ffffcc;
+			padding:5px;
+			display:table-cell;
+			border-right:5px solid #999966;
+			border-left:10px solid #999966;
+			h3 {
+				margin-top:5px;
+			}
+		}
+		.finaidtoolbox-pathfinder-image {
+			background-color:white;
+			display:table-cell;
+			vertical-align:middle;
+			border-right:10px solid #999966;
+			border-left:5px solid #999966;
+		}
+		.finaidtoolbox-pathfinder-clear {
+			clear:both;
+			height:10px;
+		}
 
 		img[align="left"],
 		img[style*="float: left"],
@@ -661,6 +723,7 @@ body.FinancialAidToolbox {
 			padding-left:5px;
 		}
 	}
+
 	aside.region-sidebar-second-finaidtoolbox {
 		float:right;
 		//margin-left:0;
@@ -669,7 +732,6 @@ body.FinancialAidToolbox {
 	.region-sidebar-second-finaidtoolbox {
 		min-height:250px;
 		padding-top:10px;
-		padding-bottom:52px;  //must have same padding as region-content for equal-height js to work properly
 	}
 
 	.sidebar-block-wrapper {}
@@ -713,15 +775,28 @@ body.FinancialAidToolbox {
 	//in order for the two footer elements to look like one, some padding and margin tweaks are needed.  in most cases this one-ness is done with wrapper elements but because of the layout of this page with the spanning sidebar wrappers could not be used
 	.region-footer-first-finaidtoolbox {
 		padding-top:13px;  //align the logo with the footer text
-		background-color:orange;
+		background-color:#999966;
 		padding-left:10px;
 		height:66px;
 	}
 	.region-footer-second-finaidtoolbox {
-		background-color:orange;
+		color:white;
+		background-color:#999966;
 		margin-left:-10px;  //this is removing 20 pixels of margin, the 10 applied by omega and the -10 applied here.  this margin is replaced with padding on the first and second footer elements
 		padding-right:10px;
 		height:79px;  //this height accommodates the 13px of padding used to align the logo
+		p {
+			padding-top:5px;
+		}
+		a,
+		a:visited {
+			color:#e0e0e0;
+			text-decoration:none;
+		}
+		a:hover {
+			text-decoration:underline;
+			color:#ccc;
+		}
 	}
 	//the div selector is needed to make sure the margin overrides the omega margin.
 	div.region-footer-second-finaidtoolbox {
