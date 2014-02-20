@@ -366,7 +366,6 @@ body, span, p, ul, li, table, div {
 }
 
 
-
 /****** Campus ******/
 
 body.Campus {
@@ -563,16 +562,24 @@ body.Campus {
 }
 
 
+
 /****** FinAidToolbox ******/
 
 body.FinancialAidToolbox {
 	background-color:#b2b275;
+	#zone-content label {
+		display:inline-block;
+	}
 }
 
 
 .zone-content-wrapper-finaidtoolbox {}
 .zone-content-finaidtoolbox {  //the majority of the page is in the content zone for this site since we needed a full page length right bar
 	min-width:320px;
+	table {
+		border-collapse: inherit;
+	}
+
 }
 
 	//in order for the two header elements to look like one, some padding and margin tweaks are needed.  in most cases this one-ness is done with wrapper elements but because of the layout of this page with the spanning sidebar wrappers could not be used
@@ -597,6 +604,10 @@ body.FinancialAidToolbox {
 			color:white;
 			//font-family: $callout-font-family;
 			padding:15px 10px 10px;
+			a {
+				text-decoration:none;
+				color:white;
+			}
 		}
 	}
 	//the div selector is needed to make sure the margin overrides the omega margin.
@@ -644,14 +655,12 @@ body.FinancialAidToolbox {
 			a:last-child {
 				margin-right:5px;
 			}
-			a:hover{
+			a:hover,
+			a.bar-active{
 				background-color:$contrast-color;
 				color:$base-color-light;
 			}
 		}
-
-
-
 	}
 	//this margin was adjusted to accommodate the border applied in the region
 	div.region-menu-finaidtoolbox,
@@ -660,20 +669,38 @@ body.FinancialAidToolbox {
 	}
 
 	.region-content-finaidtoolbox {
-		//background-color:#999966;
-		background-color:#ffffcc;
-		padding-bottom:20px;
-		padding-top:10px;
-		//padding:10px;
+		background-color:#999966;
+		margin-bottom:30px;
+
+		.next_button {
+			position: absolute;
+			bottom: -32px;
+			right: 10px;
+
+			text-align: center;
+
+			a, a:visited {
+				border: 1px solid #c1c19e;
+				padding: 7px;
+				color:white;
+				text-decoration:none;
+				background-color:$base-color-light;
+			}
+			a:hover {
+				background-color:$base-color;
+			}
+		}
 
 		.content {
-			padding: 0 5px;  //this is only set to 5 because there are two content divs wrapped around each other
+			margin:10px;
+			background-color:#ffffcc;
+			padding: 0 5px;  //this is only set to 5 because there are two content divs wrapped around each other.  this padds the body text
 		}
 
 		.finaidtoolbox-pathfinder-wrapper {
 			background-color:#999966;
-			margin: -10px -10px -20px -10px;
-			padding-bottom: 20px;
+			margin: -20px -30px;
+
 		}
 
 		.finaidtoolbox-pathfinder-number {
@@ -684,13 +711,13 @@ body.FinancialAidToolbox {
 			left:-10px;
 			width:25px;
 			height:25px;
-			padding-left: 7px;
 			padding-top: 3px;
 			font-weight: 600;
 			margin-bottom: -10px;
 			color:$base-color-light;
+			text-align:center;
 		}
-		.finaidtoolbox-pathfinder-content {
+		.finaidtoolbox-pathfinder-step {
 			background-color:#ffffcc;
 			padding:5px;
 			display:table-cell;
@@ -731,7 +758,7 @@ body.FinancialAidToolbox {
 	}
 	.region-sidebar-second-finaidtoolbox {
 		min-height:250px;
-		padding-top:10px;
+		//padding-top:10px;
 	}
 
 	.sidebar-block-wrapper {}
@@ -760,6 +787,10 @@ body.FinancialAidToolbox {
 		padding:10px;
 		margin-bottom:20px;
 		background-color: #DDDEA5;
+		a.nav-active {
+			color:black;
+			text-decoration:none;
+		}
 	}
 
 
