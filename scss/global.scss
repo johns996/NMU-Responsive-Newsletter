@@ -90,14 +90,39 @@ body, span, p, ul, li, table, div {
 
 .zone-menu-northern-news {
 	.menu-first-northern-news {
-		h3 {
-			padding-top:6px;
-			margin:0;
-			font-weight:400;
-			font-family:$verdana;
+		max-width:300px;
+
+		.styled-select {
+			select {
+				@include rem-font-size(14, '');
+				background: $base-color-dark;
+				color: white;
+				font-weight:400;
+				font-family:$verdana;
+				border: 0;
+				margin-top: 3px;
+				-webkit-appearance: none;
+				width: 220px;
+			}
+
+			select:not(:checked) {
+				background-image:url('http://www.nmu.edu/Webb/Images/MiscInterfaces/1.jpg');
+			}
 		}
 
-		max-width:300px;
+		.ie-styled-select {
+			select {
+				@include rem-font-size(14, '');
+				background: $base-color-dark;
+				color: white;
+				font-weight:400;
+				font-family:$verdana;
+				border: 0;
+				margin-top: 3px;
+				-webkit-appearance: none;
+				width: 220px;
+			}
+		}
 	}
 
 	.menu-second-northern-news {
@@ -178,6 +203,32 @@ body, span, p, ul, li, table, div {
 		}
 
 		.northern-news-content-divs {
+			.northern-news-content-faqs {
+				.content-second-northern-news-question-display-button {
+					width:calc(50% + 112px);
+					height:35px;
+				}
+
+				.northern-news-content-submit-botton {
+					margin-top:10px;
+					margin-bottom:10px;
+					width:230px;
+					float:right !important;
+				}
+
+				.content-second-northern-news-question-display-button-search {
+					width:calc(50% + 65px);
+					height:35px;
+				}
+
+				p {
+					padding:0px;
+					margin:0px;
+					padding-top:1px;
+					padding-bottom:14px;
+				}
+			}
+
 			.northern-news-content-submit-announcments {
 				.HTML_AddCheck_Label {
 					white-space:normal !important;
@@ -250,6 +301,7 @@ body, span, p, ul, li, table, div {
 				width:calc(50% + 65px);
 				height:35px;
 			}
+
 			.northern-news-content-submit-botton {
 				margin-top:10px;
 				margin-bottom:10px;

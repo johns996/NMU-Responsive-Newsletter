@@ -25,12 +25,29 @@
 
 .zone-menu-northern-news {
 	.menu-first-northern-news {
-		h3 {
-			@include rem-font-size(16, '');
+
+		.ie-styled-select {
+			select {
+				@include rem-font-size(16, '');
+				height: 25px;
+				width: 260px;
+			}
+		}
+		
+		.styled-select {
+			select {
+				@include rem-font-size(16, '');
+				height: 25px;
+				width: 260px;
+			}
+
+			select:not(:checked) {
+				background-image:url('http://www.nmu.edu/Webb/Images/MiscInterfaces/2.jpg');
+			}
 		}
 
-		max-width:200px;
-		height:30px\9;
+		max-width:250px;
+		height:30px;
 	}
 
 	.menu-second-northern-news {
@@ -42,7 +59,7 @@
 
 		text-align:right;
 		float:right;
-		min-width:430px;
+		min-width:380px;
 		display:block;
 
 		margin-top:-20px\9;
@@ -62,6 +79,17 @@
 		}
 
 		.northern-news-content-divs {
+			.northern-news-content-faqs {
+				.content-second-northern-news-question-display-button {
+					width:calc(50% + 130px);
+				}
+
+				.northern-news-content-submit-botton {
+					margin-top:15px;
+					width:250px;
+				}
+			}
+
 			padding-left:10px;
 			padding-right:15px;
 		}
