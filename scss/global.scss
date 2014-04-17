@@ -27,6 +27,9 @@ $FontAwesomePath: "/sites/all/themes/omega_nmu/font" !default;
 //module styles are included at the top because they are generally more specific than the global styles and will take precedence due to that specificity
 @import '../../omega_nmu/scss/modules/drupal-user';
 
+//import main nmu classes file
+@import '../../omega_nmu/scss/modules/classes';
+
 html {
 	font-size: 62.5%; //get rem's down to a easily understandable size (14px == 1.4 rem)
 	//rem's used in this SCSS will always reference the size of the html font, ie. root em's (rems)
