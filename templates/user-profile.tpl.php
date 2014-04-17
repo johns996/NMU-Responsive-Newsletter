@@ -27,15 +27,6 @@ $classSqlQuery->SpecifyDB(Const_connLocalhostHost, Const_connLocalhostDrupalDefa
 $QueryUID = $GLOBALS['user']->uid;
 $strBaseURL = $GLOBALS['base_url'];
 
-$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-$arrBossIPs = array('ejmac.nmu.edu',		//198.110.203.106
-					'ericjohnpc.nmu.edu',	//198.110.203.203
-					'ejimac.nmu.edu',		//198.110.203.107
-					//'ericjohn.nmu.edu',	//198.110.203.105
-					'aquinn.nmu.edu',		//198.110.203.200
-					'aqimac.nmu.edu',		//198.110.203.196
-					'aqbkup.nmu.edu');		//198.110.203.197
-
 //sites a user can access
 function site_access_check($str_uid, $user_name)
 {
@@ -108,11 +99,10 @@ if(!empty($q_SiteName))
 else
 	$SiteName = 'Undefined';
 
-if (in_array($hostname, $arrBossIPs))
+if(INT_ByPassLogin)
 {
 	//boss mode engaged
 	//use this for testing new features without letting the world see them
-
 }
 
 if (!node_access('update', 'node/1')) //check to see if the user has access to manage this site
@@ -126,7 +116,7 @@ else
 	echo'<h2>NMU Content Management System</h2>',
 			'<p>Welcome to the NMU Content Management System (CMS).  Use the links across the top of the page to view and edit this site\'s content. The links below will help you use the CMS and report issues with your website. <a href="'.$strBaseURL.'/user/logout">Log Out</a>';
 
-			$q_UserCreated = db_query("SELECT created FROM users WHERE uid = '".$QueryUID."'")->fetchCol();
+			$q_UserCreated = db_query("SELECT created FROM {users} WHERE uid = '".$QueryUID."'")->fetchCol();
 			$str_OneWeekFromToday = time() - (7 * 24 * 60 * 60); //one week from now
 
 			//analytics (only showing for configured sites)
@@ -142,8 +132,15 @@ else
 				//echo '<div class="user_msg new_feature"><p>A Google Analytics module was recently added to the NMU CMS.  Google Analytics is used on the NMU website to track visitor activity on our web pages.  You can view a one-month summary of collected data by clicking on the orange Google Analytics icon below.  The data presented in the report is updated every three days.</p></div>';
 			}
 			else
+			{
 				$user_button_ga = '';
+			}
 
+				/*
+				echo '<div class="user_msg new_feature"><p>This website has recently been converted to use a new theme.  This theme makes a web site respond to a user\'s screen size allowing an improved mobile-web experience.</p>';
+				echo '<p>The basic structure of your website and the content within it has not changed.  This theme, however, uses a completely different set of styles to control the look of NMU pages so you may notice some things behaving differently.<p>';
+				echo '<p>We have tested all converted sites to ensure nothing was broken by the new theme.  If you find something that does not look right, please email <a href="mailto:ericjohn@nmu.edu">ericjohn@nmu.edu</a> with the URL of the page, a description of the issue and the browser you were using when you noticed the problem.  If something critical has been broken by the theme, please call Eric Johnson (2313) or the Communications and Marketing office (2720) and we will fix the problem or revert your site to the previous theme while we work on a solution.</p></div>';
+			*/
 				/*
 				echo '<div class="user_msg new_feature"><p>If you are having problems editing a web page using the CMS, please follow the steps outlined in <a href="http://www.nmu.edu/node/274">this guide</a> to resolve the issue.</p></div>';
 				echo '<div class="user_msg new_feature"><p>Two changes have recently been made to the file manager used by the NMU CMS.  These changes have been made based on user feedback in hopes of improving the usability of the file manager. <span id="read_more_link">Read More</span>
@@ -152,7 +149,9 @@ else
 				*/
 
 			if($q_UserCreated[0] > $str_OneWeekFromToday)  //for a week after the user is created, show the CMS eval message
+			{
 				echo '<div class="user_msg first_timer"><p>It looks like you are new to the NMU CMS.  If that is the case, please take a minute to complete the <a href="http://www.nmu.edu/cmseval">CMS training evaluation survey</a>.  Your feedback will help us improve the training process and is greatly appreciated.</p></div>';
+			}
 
 			echo '<div>',
 			'<a href="https://docs.google.com/document/d/1eK3EtEycdW7Gsmaeift6R2JYxIFQFyRZCfDJRDdPJps/edit" target="_blank"><img src="/sites/all/themes/nmu/images/user_icons/guide.png" width="100" height="120" title="CMS Guide" style="padding-right:5px;" /></a>',
@@ -197,7 +196,7 @@ else
 		$str_cm_users = '';
 		foreach($q_SiteUsers as $key => $val)
 		{
-			$q_UserNames = db_query("SELECT name FROM users WHERE uid = '".$val."'")->fetchCol();
+			$q_UserNames = db_query("SELECT name FROM {users} WHERE uid = '".$val."'")->fetchCol();
 			if(!empty($q_UserNames))
 			{
 				foreach($q_UserNames as $key => $val)
