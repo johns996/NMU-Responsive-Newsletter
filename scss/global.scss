@@ -165,6 +165,14 @@ body, span, p, ul, li, table, div {
 	a:active 	{ color:black; text-decoration: none; }
 	@include rem-line-height(18);
 
+	.notes-text {
+		ul li {
+			list-style-type: disc;
+		}
+		ol li {
+			list-style-type: decimal;
+		}
+	}
 	ul {
 		li {
 			list-style-type: none;
