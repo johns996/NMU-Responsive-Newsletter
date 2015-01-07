@@ -100,7 +100,7 @@ body, span, p, ul, li, table, div {
 				@include rem-font-size(14, '');
 				//background: $base-color-dark;
 				//background: transparent;
-				background: url("/images/ArrowYellow.png") no-repeat right transparent;
+				background: url("/sites/all/themes/omega_newsletter/images/ArrowYellow.png") no-repeat right transparent;
 				color: white;
 				font-weight:400;
 				font-family:$verdana;
@@ -116,7 +116,7 @@ body, span, p, ul, li, table, div {
 				@include rem-font-size(14, '');
 				//background: $base-color-dark;
 				//color: white;
-				 background: url("/images/ArrowYellow.png") no-repeat right transparent;
+				 background: url("/sites/all/themes/omega_newsletter/images/ArrowYellow.png") no-repeat right transparent;
 				font-weight:400;
 				font-family:$verdana;
 				border: 0;
