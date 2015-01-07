@@ -93,37 +93,36 @@ body, span, p, ul, li, table, div {
 
 .zone-menu-northern-news {
 	.menu-first-northern-news {
-		max-width:300px;
+		max-width:360px;
 
 		.styled-select {
 			select {
 				@include rem-font-size(14, '');
-				background: $base-color-dark;
+				//background: $base-color-dark;
+				//background: transparent;
+				background: url("/images/ArrowYellow.png") no-repeat right transparent;
 				color: white;
 				font-weight:400;
 				font-family:$verdana;
 				border: 0;
 				margin-top: 3px;
 				-webkit-appearance: none;
-				width: 220px;
-			}
-
-			select:not(:checked) {
-				background-image:url('http://www.nmu.edu/Webb/Images/MiscInterfaces/1.jpg');
+				width: 265px;
 			}
 		}
 
 		.ie-styled-select {
 			select {
 				@include rem-font-size(14, '');
-				background: $base-color-dark;
-				color: white;
+				//background: $base-color-dark;
+				//color: white;
+				 background: url("/images/ArrowYellow.png") no-repeat right transparent;
 				font-weight:400;
 				font-family:$verdana;
 				border: 0;
 				margin-top: 3px;
 				-webkit-appearance: none;
-				width: 220px;
+				width: 265px;
 			}
 		}
 	}
@@ -165,6 +164,21 @@ body, span, p, ul, li, table, div {
 	a:active 	{ color:black; text-decoration: none; }
 	@include rem-line-height(18);
 
+	.arrow-down {
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid #f00;
+	}
+	.notes-text {
+		ul li {
+			list-style-type: disc;
+		}
+		ol li {
+			list-style-type: decimal;
+		}
+	}
 	ul {
 		li {
 			list-style-type: none;

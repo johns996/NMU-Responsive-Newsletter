@@ -38,7 +38,7 @@
 			select {
 				@include rem-font-size(20, '');
 				height: 32px;
-				width: 300px;
+				width: 370px;
 			}
 		}
 
@@ -46,15 +46,11 @@
 			select {
 				@include rem-font-size(20, '');
 				height: 32px;
-				width: 300px;
-			}
-
-			select:not(:checked) {
-				background-image:url('http://www.nmu.edu/Webb/Images/MiscInterfaces/3.jpg');
+				width: 370px;
 			}
 		}
 
-		max-width:315px;
+		max-width:370px;
 	}
 
 	.menu-second-northern-news {

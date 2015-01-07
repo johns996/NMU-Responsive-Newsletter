@@ -30,7 +30,7 @@
 			select {
 				@include rem-font-size(16, '');
 				height: 25px;
-				width: 260px;
+				width: 300px;
 			}
 		}
 		
@@ -38,15 +38,11 @@
 			select {
 				@include rem-font-size(16, '');
 				height: 25px;
-				width: 260px;
-			}
-
-			select:not(:checked) {
-				background-image:url('http://www.nmu.edu/Webb/Images/MiscInterfaces/2.jpg');
+				width: 300px;
 			}
 		}
 
-		max-width:250px;
+		max-width:300px;
 		height:30px;
 	}
 
