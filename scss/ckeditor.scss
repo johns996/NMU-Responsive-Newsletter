@@ -1,0 +1,95 @@
+/* This SCSS file contains styles for use in the ckEditor
+	it focuses solely on styles that will affect the zone-content area of the page.
+*/
+
+
+@import "global";
+
+//all of these are imported in the global
+	//@import "base";
+	//@import 'font-awesome/font-awesome';
+	//@import "bootstrap-icons";
+	//@import "bootstrap-buttons";
+	//@import "omega-visuals-custom";
+	//@import 'modules/nmu-homepage-mobile';
+	//@import 'modules/admissions-intro-mobile';
+	//@import 'modules/hp-blocks-mobile';
+
+//.cke_top {
+//	padding-top:36px;
+//}
+
+h5 {
+	font-size:1.2em;  //added for the zen conversion
+}
+
+body.cke_ltr {
+	background: transparent;  //this is for the heading pull down box.  without it, it turns green
+}
+
+//below this line, adjust any global-based styles to configure ckeditor as desired
+body.cke_editable
+{
+	font-size: 13px;
+	background-color: #fff;
+
+	//add other styles within this block to ensure they only apply to ckeditor
+
+	.GreenBox,
+	.YellowBox,
+	.RedBox,
+	.BrownBox,
+	.OrangeBox,
+	.BlueBox,
+	.GrayBox,
+	.PurpleBox,
+	.TealBox,
+	.LightBlueBox {
+		width:325px;
+	}
+
+	img[align="left"],
+	img[style*="float: left"],
+	img[style*="float:left"]{ //more about attribute selectors: http://css-tricks.com/attribute-selectors/ -and- http://quirksmode.org/css/selectors/selector_attribute.html
+		padding-right:5px;
+	}
+	img[align="right"],
+	img[style*="float: right"],
+	img[style*="float:right"]{
+		padding-left:5px;
+	}
+
+	/* custom style helpers */
+	.screen_reader_only {
+		background-color:#cecece;
+	}
+	.screen_reader_only:before {
+		content: "### For Screen Readers Only ###";
+		background-color:#565656;
+		color:#fff;
+	}
+	.ckeditor_form {
+		width:400px;
+		height:50px;
+		background-color:#cecece;
+	}
+	.ckeditor_form:before {
+		content: "### This is the PHP form - do not delete ###";
+		background-color:#565656;
+		color:#fff;
+	}
+
+	.column-break:after {
+		content: '## column break ##';
+		width: 100%;
+		background-color: rgb(228, 176, 176);
+		padding: 2px;
+	}
+	.callout-text-block {
+		 color:#01754e;
+		 font-size:18px;
+		 line-height:24px;
+		 font-weight:600;
+		 padding:10px;
+	}
+}
