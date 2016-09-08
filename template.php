@@ -48,21 +48,13 @@ function omega_newsletter_preprocess_html(&$vars)
 	if(isset($GLOBALS['conf']['syslog_identity']))  //use this area to set site-specific stylesheets
 	{
 
-		/* not used yet
-		// bulletin css
-		if(strpos($GLOBALS['conf']['syslog_identity'], 'Bulletin') !== false)  //match any site with Bulletin in its identity
+		if($GLOBALS['conf']['syslog_identity'] === 'DrupalFinancialAidToolbox')  //match any site with C&M in its identity
 		{
-			drupal_add_css(drupal_get_path('theme', 'omega_newsletter') . '/css/Custom/bulletin.css'); //add a bulletin css to the start of the styles array
-			$css = drupal_add_css(); // Rebuild Drupal's css array:
-			$styles = drupal_get_css($css); // Apply that array to the $styles string to be printed in the <head> section of html.tpl.php
-		}
-		if($GLOBALS['conf']['syslog_identity'] === 'DrupalCommunicationsAndMarketing')  //match any site with C&M in its identity
-		{
-			drupal_add_css(drupal_get_path('theme', 'omega_newsletter') . '/css/Custom/comm_mktg.css');
+			drupal_add_css(drupal_get_path('theme', 'omega_newsletter') . '/css/finaidtoolbox.css');
 			$css = drupal_add_css();
 			$styles = drupal_get_css($css);
 		}
-		*/
-
 	}
+
+
 }
